@@ -19,14 +19,14 @@ pod 'FLCorner'
 
 ## usage:
 ```
-// 方式1 圆角+边框(默认黑色)
+// 方式1 圆角
 [imageView fl_imageViewWithCorner:50.f];
 // 方式2 圆角+边框(默认黑色)
 [imageView fl_imageViewWithCorner:50.f borderWidth:10.f];
 //  方式3 圆角+自定义边框颜色
 [imageV4 fl_imageViewWithCorner:50.f borderWidth:10.f borderColor:[UIColor redColor]];
 // 方式4 圆角+自定义边框颜色+圆角样式
-[imageV5 fl_imageViewWithCorner:50.f borderWidth:10.
+[imageView fl_imageViewWithCorner:50.f borderWidth:10.f borderColor:[UIColor blueColor] rectCorner:UIRectCornerTopLeft | UIRectCornerBottomRight]
 ```
 ##License:  
 
