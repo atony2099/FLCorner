@@ -99,9 +99,9 @@
 #pragma mark - draw methods
 - (void)reSetImage{
     
-    
+//    
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    // 异步绘制，提高效率
+//    // 异步绘制，提高效率
     dispatch_async(queue, ^{
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, [UIScreen mainScreen].scale);
         if (!UIGraphicsGetCurrentContext()) {
@@ -114,11 +114,11 @@
         UIImage *reSetImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+       dispatch_async(dispatch_get_main_queue(), ^{
             if (reSetImage) {
                 reSetImage.hasClip = YES;
                 self.image = reSetImage;
-            }
+           }
         });
     });
     
